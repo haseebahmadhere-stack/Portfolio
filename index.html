@@ -210,6 +210,38 @@
   <p id="out"></p>
 </div>
 
-
+<!-- ===================== Chatbot Toggle Button ===================== -->
+    <!-- This button floats at the bottom-right corner of the page -->
+    <button id="chatbot-toggle" aria-label="Open chatbot">
+        💬
+    </button>
+ 
+    <!-- ===================== Chatbot Window ===================== -->
+    <!-- The chat window that appears when the toggle button is clicked -->
+    <div id="chatbot-window" class="hidden">
+ 
+        <!-- Chat header with title and close button -->
+        <div id="chatbot-header">
+            <span>AI Assistant</span>
+            <button id="chatbot-close" aria-label="Close chatbot">✕</button>
+        </div>
+ 
+        <!-- Chat messages area where messages are displayed -->
+        <div id="chatbot-messages"></div>
+ 
+        <!-- Chat input area with text field and send button -->
+        <div id="chatbot-input-area">
+            <input
+                type="text"
+                id="chatbot-input"
+                placeholder="Type your message..."
+                autocomplete="off"
+            />
+            <button id="chatbot-send" aria-label="Send message">Send</button>
+        </div>
+    </div>
+ 
+    <!-- Link to external script -->
+    <script src="script.js"></script>
 </body>
 </html>
