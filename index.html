@@ -210,19 +210,6 @@
   <p id="out"></p>
 </div>
 
-<script>
-async function askAI() {
-  let msg = document.getElementById("msg").value;
 
-  let res = await fetch("/.netlify/functions/chat", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({ message: msg })
-  });
-
-  let data = await res.json();
-  document.getElementById("out").innerText = data.reply;
-}
-</script>
 </body>
 </html>
