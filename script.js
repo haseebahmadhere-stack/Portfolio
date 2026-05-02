@@ -209,7 +209,7 @@ console.log('%cBS Artificial Intelligence Student | 2nd Semester', 'color: #818c
 // Replace this with your actual OpenAI API key.
 // IMPORTANT: See README.md for instructions on how to handle
 // your API key safely. Never commit real keys to a public repo.
-const OPENAI_API_KEY = "YOUR_API_KEY_HERE";
+const OPENAI_API_KEY = "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";
  
 // The OpenAI model to use for generating responses
 const MODEL = "gpt-3.5-turbo";
