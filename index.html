@@ -7,6 +7,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+    <div style="margin-top:20px;">
+  <h3>Ask AI</h3>
+  <input id="msg" type="text" placeholder="Ask anything..." />
+  <button onclick="askAI()">Send</button>
+  <p id="out"></p>
+</div>
+
+<script>
+async function askAI() {
+  let msg = document.getElementById("msg").value;
+
+  let res = await fetch("/.netlify/functions/chat", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ message: msg })
+  });
+
+  let data = await res.json();
+  document.getElementById("out").innerText = data.reply;
+}
+</script>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
